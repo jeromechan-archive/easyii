@@ -13,6 +13,7 @@ $databaseConfig = array(
         'username' => 'root',
         'password' => 'root',
         'class' => 'CDbConnection',
+        'charset' => 'utf8',
 		'autoConnect'=>false
     ),
 );
