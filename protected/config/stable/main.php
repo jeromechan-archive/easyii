@@ -7,23 +7,24 @@
  * @time 11:14 PM
  * @description main.php
  */
-require_once(dirname(__FILE__).'/url_manager.php');
+require_once(dirname(__FILE__) . '/url_manager.php');
 require_once(dirname(__FILE__).'/database.php');
 require_once(dirname(__FILE__).'/app.php');
 
 $urlManager = array(
     'urlManager'=>array(
         'urlFormat'=>'path',
-        'rules'=> require(dirname(__FILE__).'/../extensions/mrestserver/routes.php'),
+        'rules'=> require(dirname(__FILE__) . '/../extensions/mrestserver/routes.php'),
         'caseSensitive' => false,
     ),
 );
 
 return array(
-    'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
+    'basePath'=>dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..',
     'import'=>array(
         'application.extensions.mrestserver.*',
         'application.extensions.mrestclient.*',
+        'application.extensions.snoopy.*',
         'application.models.*',
     ),
     'components'=>array_merge($urlManager, $databaseConfig),

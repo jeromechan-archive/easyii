@@ -4,9 +4,9 @@
  * Author: jeromechan
  * Date: 7/03/14
  * Time: 3:11 PM
- * Description: ToolFunction.php
+ * Description: ArrayUtils.php
  */
-class ToolFunction
+class ArrayUtils
 {
     public static function arrKeysToCamelCase($in)
     {
